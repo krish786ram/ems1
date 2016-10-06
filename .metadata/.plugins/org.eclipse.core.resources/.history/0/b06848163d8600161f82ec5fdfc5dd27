@@ -1,0 +1,104 @@
+package com.flp.ems.view;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+import com.flp.ems.domain.Employee;
+import com.flp.ems.service.EmployeeServiceImpl;
+
+public class UserInteraction {
+	Scanner sc;
+	UserInteraction(){
+		sc=new Scanner(System.in);
+	}
+	
+	EmployeeServiceImpl employeeServiceImpl=new EmployeeServiceImpl();
+	
+	public void addEmployee(){
+		
+		String first_name,last_name,phone_number,address,date_of_birth,date_of_joining;
+		String department_id,role_id,project_id;
+		
+		HashMap<String,String> dataMap=new HashMap<>();
+		System.out.println("Enter Employee Information");
+		System.out.println("Enter a name");
+		first_name=sc.next();
+		dataMap.put("first_name",first_name);
+		
+		System.out.println("Enter a last name");
+		last_name=sc.next();
+		dataMap.put("last_name",last_name);
+		
+		System.out.println("Enter phone number");
+		phone_number=sc.next();
+		dataMap.put("phone_number",phone_number);
+		
+		System.out.println("Enter a address");
+		address=sc.next();
+		dataMap.put("address",address);
+		
+		System.out.println("Enter a date of birth");
+		date_of_birth=sc.next();
+		dataMap.put("date_of_birth",date_of_birth);
+		
+		System.out.println("Enter a date of joining");
+		date_of_joining=sc.next();
+		dataMap.put("date_of_joining",date_of_joining);
+		
+		System.out.println("Enter a department id");
+		department_id=sc.next();
+		dataMap.put("department_id",department_id);
+		
+		System.out.println("Enter a role id");
+	    role_id=sc.next();
+	    dataMap.put("role_Sid",role_id);
+	    
+	    System.out.println("Enter a project id");
+		project_id=sc.next();
+		dataMap.put("project_id",project_id);
+		
+		employeeServiceImpl.addEmployee(dataMap);
+		
+	}
+	
+	public void modifyEmployee(){
+		
+	}
+	
+	public void removeEmployee(){	
+		System.out.println("Enter employee id to remove an employee");
+		String employee_id=sc.next();
+		
+		System.out.println("Are you sure you want to remove this employee?");
+		System.out.println("1.No 2.Yes");
+		int choice=sc.nextInt();
+		
+		if(choice==2)
+			employeeServiceImpl.removeEmployee(employee_id);
+		
+	}
+	
+	public void searchEmployee(){
+		
+	}
+	
+	public void getAllEmployee(){
+		
+		ArrayList<Employee> employees=employeeServiceImpl.getAllEmployee();
+		
+		for(Employee emp:employees){
+			System.out.println("Kin_Id: "+emp.getKin_id());
+			System.out.println("First Name: "+emp.getFirst_name());
+			System.out.println("Last Name: "+emp.getLast_name());
+			System.out.println("Phone Number: "+emp.getPhone_number());
+			System.out.println("Email Id: "+emp.getEmail_id());
+			System.out.println("Address: "+emp.getAddress());
+			System.out.println("Date of Birth: "+emp.getDate_of_birth());
+			System.out.println("Date of Joining: "+emp.getDate_of_joining());
+			System.out.println();
+		}
+		
+		
+	}
+}

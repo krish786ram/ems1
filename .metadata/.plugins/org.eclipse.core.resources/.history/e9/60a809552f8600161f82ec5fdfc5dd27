@@ -1,0 +1,38 @@
+package com.flp.ems.service;
+
+import java.util.HashMap;
+
+public class EmployeeServiceImpl implements IEmployeeService{
+
+	@Override
+	public void addEmployee(HashMap<String,String> dataMap) {
+		String first_name=dataMap.get("first_name");
+		String last_name=dataMap.get("last_name");
+		String phone_number=dataMap.get("phone_number");
+		String address=dataMap.get("address");
+		String date_of_birth=dataMap.get("date_of_birth");
+		String date_of_joining=dataMap.get("date_of_joining");
+		
+	}
+
+	@Override
+	public void modifyEmployee() {
+		
+	}
+
+	@Override
+	public void removeEmployee() {
+		
+	}
+
+	@Override
+	public void searchEmployee() {
+		
+	}
+
+	@Override
+	public void getAllEmployee() {
+		
+	}
+
+}

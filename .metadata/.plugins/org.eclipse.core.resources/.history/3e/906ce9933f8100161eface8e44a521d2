@@ -1,0 +1,17 @@
+package com.test;
+
+public class Test4 {
+
+	public static void main(String[] args) 
+	{
+		
+
+		  String a = "\n";      // 1
+		    String b = "\r";      // 2
+		    String c = "\u000a";"  
+		   // 
+ d = "\u000d";"  
+
+	}
+
+}

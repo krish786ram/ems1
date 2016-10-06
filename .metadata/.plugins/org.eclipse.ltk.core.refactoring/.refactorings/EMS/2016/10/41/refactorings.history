@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.flp.ems.util.getConnection.java&apos; to &apos;DBConnection.java&apos;&#x0D;&#x0A;- Original project: &apos;EMS&apos;&#x0D;&#x0A;- Original element: &apos;com.flp.ems.util.getConnection.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.flp.ems.util.DBConnection.java&apos;" description="Rename compilation unit &apos;getConnection.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.flp.ems.util{getConnection.java" name="DBConnection.java" references="false" stamp="1475582597748" version="1.0"/>
+</session>

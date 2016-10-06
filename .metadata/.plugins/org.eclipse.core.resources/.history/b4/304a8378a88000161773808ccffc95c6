@@ -1,0 +1,75 @@
+package com.barclays;
+
+import com.date.Date;
+class EmployeeNotFoundExceptio extends Exception
+{
+	//String msg;
+
+	public EmployeeNotFoundExceptio(String msg) {
+		super(msg);
+		
+	}
+	
+}
+public class Employee {
+	   private String FirstName,LastName,grade;
+	   private int salary,mediclaim,salarydrawn,rateperhour,hour;
+	   private Date JoiningDate;
+	   private static int NoOfEmployee,EID;
+	   protected static int permanantemployee,contractbasedemployee;
+	     static
+	      {  EID=200;
+	      }
+	     protected Employee(){}
+	     public Employee(Date d)
+	     {  this.JoiningDate=d;
+	  NoOfEmployee++;
+	        EID++;
+	        this.salary=salary;  
+	     }
+	     public Employee(Date d,int salary)
+	     {  this.JoiningDate=d;
+	  NoOfEmployee++;
+	        EID++;
+	        this.salary=salary;
+	     }
+	     protected Employee(Date d,int rateperhour,int hour)
+	     {  this.JoiningDate=d;
+	  NoOfEmployee++;
+	        EID++;
+	        this.rateperhour=rateperhour;
+	        this.hour=hour;
+	        calculateSalary();
+	     }
+	     private void calculateSalary()
+	     {
+	    	 salary=rateperhour*hour;
+	     }
+	   public static void getNoOfEmployee()
+	     { System.out.println("no of employee are:"+NoOfEmployee);
+	     }
+	   public static void getNoOfPermanantEmployee()
+	     { System.out.println("no of permanant employee are:"+permanantemployee+"\n");
+	     }
+	   public static void getNoOfContractBasedEmployee()
+	     { System.out.println("no of contract based employee are:"+contractbasedemployee+"\n");
+	     }
+	    
+	   public void getData()
+	 {  System.out.println(EID+"\n"+FirstName+"\n"+LastName+"\n"+salary+"\n"+grade+"\n"+JoiningDate.toString()+"\n\n\n");
+	   
+	}
+	 public void setData(String FirstName,String LastName,String grade,int salarydrawn)
+	{
+	   this.FirstName=FirstName;
+	   this.LastName=LastName;
+	   this.grade=grade;
+	   this.salarydrawn=salarydrawn;
+	}
+	public void setSalary()
+	{
+	}
+	public void calculateMediclaim()
+	{}
+
+}

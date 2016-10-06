@@ -1,0 +1,57 @@
+package com.flp.ems.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.flp.ems.dao.EmployeeDaoImplForList;
+import com.flp.ems.domain.Employee;
+
+public class EmployeeServiceImpl implements IEmployeeService{
+
+	AutoGenerate generate=new AutoGenerate();
+	EmployeeDaoImplForList employeeDao=new EmployeeDaoImplForList();
+	
+	@Override
+	public void addEmployee(HashMap<String,String> dataMap) {
+		String first_name=dataMap.get("first_name");
+		String last_name=dataMap.get("last_name");
+		String phone_number=dataMap.get("phone_number");
+		String address=dataMap.get("address");
+		String date_of_birth=dataMap.get("date_of_birth");
+		String date_of_joining=dataMap.get("date_of_joining");
+		String department_id=dataMap.get("department-id");
+		String project_id=dataMap.get("project_id");
+		String role_id=dataMap.get("role_id");
+		
+		String employee_id=generate.autogenerateID();
+		String email_id=generate.autoGenerateEmailId(first_name, last_name);
+	
+		Employee employee=new Employee(first_name,last_name,phone_number,
+				address,date_of_birth,date_of_joining,employee_id,email_id);
+		
+		employeeDao.addEmployee(employee);
+		
+	}
+
+	@Override
+	public void modifyEmployee() {
+		
+	}
+
+	@Override
+	public void removeEmployee(String employee_d) {
+		
+	}
+
+	@Override
+	public void searchEmployee() {
+		
+	}
+
+	@Override
+	public ArrayList<Employee> getAllEmployee() {		
+		ArrayList<Employee> employees=employeeDao.getAllEmployee();
+		return employees;
+	}
+
+}

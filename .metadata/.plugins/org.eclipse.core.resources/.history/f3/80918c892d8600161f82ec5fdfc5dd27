@@ -1,0 +1,11 @@
+package com.flp.ems.service;
+
+public interface IEmployeeService {
+	
+	public void addEmployee();
+	public void modifyEmployee();
+	public void removeEmployee();
+	public void searchEmployee();
+	public void getAllEmployee();
+	
+}

@@ -1,0 +1,25 @@
+package assignment;
+
+public class Account {
+
+	private int account_id;
+	private double balance;
+	
+	Account(int account_id,double balance){
+		this.account_id=account_id;
+		this.balance=balance;
+	}
+	
+	public void deposit(double amount){
+		this.balance+=amount;
+	}
+	
+	public void withdraw(double amount){
+		if(this.balance>=amount)
+			this.balance-=amount;
+	}
+	
+	public double getBalance(){
+		return balance;
+	}
+}

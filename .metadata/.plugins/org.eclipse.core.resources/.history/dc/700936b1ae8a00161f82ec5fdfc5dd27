@@ -1,0 +1,45 @@
+package com.flp.ems.dao;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.flp.ems.domain.Employee;
+import com.flp.ems.util.DBConnection;
+
+public class EmployeeDaoImplForDB implements IemployeeDao{
+	 
+	DBConnection dbcon=new DBConnection();
+
+	@Override
+	public void addEmployee(Employee employee) throws IOException, SQLException {
+		Connection con=dbcon.getConnection();
+	}
+
+	@Override
+	public void modifyEmployee(HashMap<String, String> dataMap) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeEmployee(String employee_id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Employee searchEmployee(HashMap<String, String> dataMap) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

@@ -1,0 +1,9 @@
+package assignment;
+
+public class TransactionManager {
+	
+	public void transferAmount(Account from,Account to,double amount) throws InterruptedException{
+		from.withdraw(amount);
+		to.deposit(amount);
+	}
+}

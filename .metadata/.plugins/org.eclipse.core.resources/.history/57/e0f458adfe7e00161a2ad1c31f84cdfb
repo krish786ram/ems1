@@ -1,0 +1,13 @@
+
+class String 
+{
+	}
+public class Entry2 extend String{
+
+	public static void main(String[] args) 
+	{
+      		
+
+	}
+
+}

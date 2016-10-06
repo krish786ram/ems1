@@ -1,0 +1,11 @@
+package assignment;
+
+public class Customer {
+	private int customer_id;
+	private double balance;
+	
+	Customer(int id,double balance){
+		customer_id=id;
+		this.balance=balance;
+	}
+}

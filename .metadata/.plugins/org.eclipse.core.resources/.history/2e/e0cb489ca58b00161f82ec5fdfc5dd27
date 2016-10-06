@@ -1,0 +1,5 @@
+jdbc.url=jdbc:mysql://localhost:3306/test
+
+jdbc.query.insertDepartment=Insert into department values('"+department_id+"','"+department_name+"')
+
+jdbc.query.insertRole=Insert into role values('"+role_id+"','"+role_name+"')

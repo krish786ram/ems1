@@ -1,0 +1,13 @@
+
+class String 
+{
+	}
+public class Entry2 extend javafx.application.Application{
+
+	public static void main(String[] args) 
+	{
+      		
+
+	}
+
+}

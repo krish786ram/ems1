@@ -1,0 +1,60 @@
+package com.flp.ems.dao;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.flp.ems.domain.Employee;
+import com.flp.ems.util.DBConnection;
+
+public class EmployeeDaoImplForDB implements IemployeeDao{
+	 
+	DBConnection dbcon=new DBConnection();
+
+	@Override
+	public void addEmployee(HashMap<String,String> dataMap) {
+		try {
+			/*String employee_id=employee.getKin_id();
+			String first_name=employee.getFirst_name();
+			String email_id=employee.getEmail_id();
+			String phone_number=employee.getPhone_number();
+			Date date_of_birth=(Date) employee.getDate_of_birth();
+			Date date_of_joining=(Date)employee.getDate_of_joining();
+			String address=employee.getAddress();*/
+			
+			
+			Connection con=dbcon.getConnection();
+			
+		} catch (IOException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void modifyEmployee(HashMap<String, String> dataMap) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeEmployee(String employee_id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Employee searchEmployee(HashMap<String, String> dataMap) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

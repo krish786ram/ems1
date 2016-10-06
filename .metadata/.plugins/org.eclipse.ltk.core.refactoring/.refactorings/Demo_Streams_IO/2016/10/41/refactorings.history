@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;assignment.Reader&apos; to &apos;Assignment5&apos;&#x0D;&#x0A;- Original project: &apos;Demo_Streams_IO&apos;&#x0D;&#x0A;- Original element: &apos;assignment.Reader&apos;&#x0D;&#x0A;- Renamed element: &apos;assignment.Assignment5&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Reader&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;assignment{Reader.java[Reader" matchStrategy="1" name="Assignment5" qualified="false" references="true" similarDeclarations="false" stamp="1475485020354" textual="false" version="1.0"/>
+</session>

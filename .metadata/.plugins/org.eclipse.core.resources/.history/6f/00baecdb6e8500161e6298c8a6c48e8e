@@ -1,0 +1,33 @@
+
+public class Container {
+	private int size;
+	
+	synchronized
+	public void put() throws InterruptedException{
+		while(size==1){
+			this.wait();
+		}
+		
+		Thread.sleep(1000);
+		System.out.println("producing product");
+		
+		size=1;
+		
+		this.notify();
+	}
+	
+   synchronized
+	public void get() throws InterruptedException{
+		while(size!=1){
+			this.wait();
+		}
+		
+		Thread.sleep(500);
+		System.out.println("consuming product");
+		
+		size=0;
+		
+		this.notify();
+		
+	}
+}

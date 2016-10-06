@@ -1,0 +1,100 @@
+package com.flp.ems.view;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class BootClass {
+	public static void main(String[] args) {
+		menuSelection();
+	}
+	
+	public static void menuSelection(){
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Employee Management System");
+		
+		System.out.println("Enter 1 to add a Employee");
+		System.out.println("Enter 2 to modify a Employee");
+		System.out.println("Enter 3 to remove a Employee");
+		System.out.println("Enter 4 to search a Employee");
+		System.out.println("Enter 5 to get all Employees");
+		
+		int choice=sc.nextInt();
+		
+		if(choice<=5&&choice>=1){
+			switch(choice){
+			case 1 :{
+				String first_name,last_name,phone_number,address,date_of_birth,date_of_joining;
+				String dept_id,role_id,project_id;
+				
+				HashMap<String,String> dataMap=new HashMap<>();
+				System.out.println("Enter Employee Information");
+				System.out.println("Enter a name");
+				first_name=sc.next();
+				dataMap.put(first_name,"first_name");
+				
+				System.out.println("Enter a last name");
+				last_name=sc.next();
+				dataMap.put(last_name,"last_name");
+				
+				System.out.println("Enter phone number");
+				phone_number=sc.next();
+				dataMap.put(phone_number,"phone_number");
+				
+				System.out.println("Enter a address");
+				address=sc.next();
+				dataMap.put(address,"address");
+				
+				System.out.println("Enter a date of birth");
+				date_of_birth=sc.next();
+				dataMap.put(date_of_birth,"date_of_birth");
+				
+				System.out.println("Enter a date of joining");
+				date_of_joining=sc.next();
+				dataMap.put(date_of_joining,"date_of_joining");
+				
+				System.out.println("Enter a department id");
+				dept_id=sc.next();
+				dataMap.put(dept_id,"dept_id");
+				
+				System.out.println("Enter a role id");
+			    role_id=sc.next();
+			    dataMap.put(role_id,"role-id");
+			    
+			    System.out.println("Enter a project id");
+				project_id=sc.next();
+				dataMap.put(project_id,"project_id");
+				
+				
+				break;
+			}
+			case 2 :{
+				System.out.println("Enter a employee id to modify an employee information");
+				int employee_id=sc.nextInt(); 
+				
+				break;
+			}
+			case 3 :{
+				System.out.println("Enter a employee id to remove an employee");
+				int employee_id=sc.nextInt(); 
+				
+				break;
+			}
+			case 4 :{
+				System.out.println("Enter employee id to search an employee");
+				int employee_id=sc.nextInt();
+				System.out.println("Enter email id to search an employee");
+				String email_id=sc.next();
+				
+				break;
+			}
+			case 5 :{
+				
+				break;
+			}
+			}
+		}
+		else
+			System.out.println("Enter a CORRECT choice");
+	}
+}

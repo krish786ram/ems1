@@ -1,0 +1,37 @@
+package demoJDBC;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class Entry2 {
+	public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
+		//TODO LOAD JDBC PROPERTIES FROM FILE SYSTEM
+		Properties props=new Properties();
+		
+		FileInputStream fIn=new FileInputStream("dbDetails.properties");
+		
+		props.load(fIn);
+		
+	//	String driver=props.getProperty("jdbc.driver");
+		
+		//Class.forName(driver);
+		
+		String url=props.getProperty("jdbc.url");
+		
+		Connection dbConnection = null;
+		
+		try{
+		dbConnection=DriverManager.getConnection(url);	
+		System.out.println("Connection successful ? "+(dbConnection!=null));
+		}
+		
+		finally{
+			dbConnection.close();
+		}
+	}
+}

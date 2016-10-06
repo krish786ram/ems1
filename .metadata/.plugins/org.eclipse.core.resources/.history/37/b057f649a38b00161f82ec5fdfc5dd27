@@ -1,0 +1,90 @@
+package com.flp.ems.dao;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.flp.ems.domain.Employee;
+import com.flp.ems.service.AutoGenerate;
+import com.flp.ems.util.DBConnection;
+
+public class EmployeeDaoImplForDB implements IemployeeDao{
+	 
+	DBConnection dbcon=new DBConnection();
+	AutoGenerate generate=new AutoGenerate();
+	
+	@Override
+	public void addEmployee(HashMap<String,String> dataMap) {
+		try {
+			
+			String department_id=dataMap.get("department_id");
+			String department_name=dataMap.get("department_name");
+			
+			String role_id=dataMap.get("role_id");
+			String role_name=dataMap.get("role_name");
+			
+			String project_id=dataMap.get("project_id");
+			String project_name=dataMap.get("project_name");
+			
+			String first_name=dataMap.get("first_name");
+			String last_name=dataMap.get("last_name");
+			String phone_number=dataMap.get("phone_number");
+			String address=dataMap.get("address");
+			String date_of_birth=dataMap.get("date_of_birth");
+			String date_of_joining=dataMap.get("date_of_joining");
+			String employee_id=generate.autogenerateID();
+			String email_id=generate.autoGenerateEmailId(first_name, last_name);
+			
+			Connection con=dbcon.getConnection();
+			
+			Date dob = null,doj = null;
+			String format="dd-mm-yyyy";
+			SimpleDateFormat dformat = new SimpleDateFormat(format);
+			
+			try {
+				dob=(Date) dformat.parse(date_of_birth);
+				doj=(Date) dformat.parse(date_of_joining);
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+			
+			java.sql.Date sqldob=new java.sql.Date(dob.getTime());
+			java.sql.Date sqldoj=new java.sql.Date(doj.getTime());
+			
+			
+			
+		} catch (IOException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void modifyEmployee(HashMap<String, String> dataMap) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeEmployee(String employee_id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Employee searchEmployee(HashMap<String, String> dataMap) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

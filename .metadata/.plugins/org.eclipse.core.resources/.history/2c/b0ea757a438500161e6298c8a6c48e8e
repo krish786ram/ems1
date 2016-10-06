@@ -1,0 +1,14 @@
+package assignment;
+
+public class Account {
+
+	
+	
+	private void deposit(double amount){
+		
+	}
+	
+	private void withdraw(double amount){
+		
+	}
+}

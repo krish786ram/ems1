@@ -1,0 +1,29 @@
+package com.barclays;
+class A
+{  
+	static int a=5;
+	 int b=6;
+	A()
+	{
+	  //this(5);
+	} 
+    A(int x){ }
+    A(int x,int y){}
+    //A(void){}
+}
+class B extends A
+{
+	static int c=8;
+	int d=9;
+	B(){}
+	 static int m1(){return 5;}
+  B(int x){}
+  B(int x,int y){super(m1());}
+  public static  void main(String args[])
+  {try
+  {}
+  finally
+  {throw new ArithmeticException();}
+}
+  }
+

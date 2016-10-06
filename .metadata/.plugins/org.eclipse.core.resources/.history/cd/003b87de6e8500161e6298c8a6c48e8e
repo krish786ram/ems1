@@ -1,0 +1,21 @@
+
+public class Consumer extends Thread {
+
+	Container container;
+	
+	Consumer(Container container){
+		this.setName("Consumer_Thread");
+		this.container=container;
+	}
+	
+	@Override
+	public void run(){
+		while(true){
+			try {
+				container.get();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

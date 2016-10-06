@@ -1,0 +1,24 @@
+package com.flp.ems.view;
+
+public class UserInteraction {
+
+	public void addEmployee(){
+		
+	}
+	
+	public void modifyEmployee(){
+		
+	}
+	
+	public void removeEmployee(){
+		
+	}
+	
+	public void searchEmployee(){
+		
+	}
+	
+	public void getAllEmployee(){
+		
+	}
+}

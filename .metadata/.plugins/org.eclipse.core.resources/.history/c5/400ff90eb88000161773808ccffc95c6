@@ -1,0 +1,60 @@
+import com.barclays.Employee;
+import com.barclays.EmployeeNotFoundException;
+import com.barclays.Permanant.PermanantEmployee;
+import com.barclays.contractbased.ContractBasedEmployee;
+import com.date.Date;
+
+public class test {
+	 public static boolean checkID(Employee e[],int x) throws EmployeeNotFoundException
+	 {   for(Employee emp:e){
+	     	if(emp.getID()==x)
+	 			return true;
+	 }
+	     		throw new EmployeeNotFoundException("EmployeeNotFoundException");
+	     	}
+	
+	public static void main(String[] args) throws EmployeeNotFoundException{
+	/*	// TODO Auto-generated method stub
+		   Date d1=new Date(10,7,2016);
+		    // System.out.println(d1);
+		      PermanantEmployee e=new PermanantEmployee(d1,20000);
+		     e.setData("Pooja","Sharma","developer",500);
+		     e.getData();
+		     
+		   Date d2=new Date(1,8,2015);
+		   ContractBasedEmployee e1=new ContractBasedEmployee(d2,1000,8);
+		     e1.setData("Neha","Gupta","Designer",500);
+		     e1.getData();
+		     
+		    
+		     Employee.getNoOfEmployee();
+		     Employee.getNoOfPermanantEmployee();
+		     Employee.getNoOfContractBasedEmployee();
+		     Integer x=5+new Integer(6);*/
+		String s[]={"pooja","neha","rupali","smriti","aastha"};
+		Employee e[]=new Employee[5];Date d1;
+		for(int i=0;i<5;i++)
+		{    d1=new Date(10,7,2016);
+			e[i]=new Employee(d1,50000);
+			e[i].setData(s[i],"Sharma","developer",500);
+		}
+		int x=204,y=300,fx=0,fy=0;
+		try
+		{ if(test.checkID(e,x))
+			System.out.println("Found");
+		else
+		    throw new EmployeeNotFoundException("EmployeeNotFoundException");
+		if(Employee.checkID(e,y))
+			System.out.println("Found");
+		else
+		    throw new EmployeeNotFoundException("EmployeeNotFoundException");
+		 
+		}
+		catch(EmployeeNotFoundException exp)
+		{
+			System.out.println(exp.getMessage());
+		}
+		
+	}
+
+}

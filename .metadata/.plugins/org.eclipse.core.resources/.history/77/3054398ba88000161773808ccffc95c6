@@ -1,0 +1,36 @@
+import com.barclays.Employee;
+import com.barclays.Permanant.PermanantEmployee;
+import com.barclays.contractbased.ContractBasedEmployee;
+import com.date.Date;
+
+public class test {
+
+	public static void main(String[] args) {
+	/*	// TODO Auto-generated method stub
+		   Date d1=new Date(10,7,2016);
+		    // System.out.println(d1);
+		      PermanantEmployee e=new PermanantEmployee(d1,20000);
+		     e.setData("Pooja","Sharma","developer",500);
+		     e.getData();
+		     
+		   Date d2=new Date(1,8,2015);
+		   ContractBasedEmployee e1=new ContractBasedEmployee(d2,1000,8);
+		     e1.setData("Neha","Gupta","Designer",500);
+		     e1.getData();
+		     
+		    
+		     Employee.getNoOfEmployee();
+		     Employee.getNoOfPermanantEmployee();
+		     Employee.getNoOfContractBasedEmployee();
+		     Integer x=5+new Integer(6);*/
+		String s[]={"pooja","neha","rupali","smriti","aastha"};
+		Employee e[]=new Employee[5];Date d1;
+		for(int i=0;i<5;i++)
+		{    d1=new Date(10,7,2016);
+			e[0]=new Employee(d1,50000);
+			e[0].setData(s[0],"Sharma","developer",500);
+		}
+		int x=204,y=300;
+	}
+
+}

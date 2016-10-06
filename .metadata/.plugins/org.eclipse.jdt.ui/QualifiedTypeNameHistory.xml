@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.date.Date"/>
+<fullyQualifiedTypeName name="com.barclays.PermanantEmployee"/>
+<fullyQualifiedTypeName name="com.barclays.Employee"/>
+<fullyQualifiedTypeName name="com.barclays.ContractBasedEmployee"/>
+<fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+<fullyQualifiedTypeName name="com.barclays.EmployeeNotFoundExceptio"/>
+<fullyQualifiedTypeName name="com.barclays.EmployeeNotFoundException"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="assignment.TransactionManager"/>
+<fullyQualifiedTypeName name="Container"/>
+</qualifiedTypeNameHistroy>

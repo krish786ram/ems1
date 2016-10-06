@@ -1,0 +1,20 @@
+
+public class Consumer implements Runnable {
+
+	Container container;
+	
+	Consumer(Container container){
+		this.container=container;
+	}
+	
+	@Override
+	public void run(){
+		while(true){
+			try {
+				container.get();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

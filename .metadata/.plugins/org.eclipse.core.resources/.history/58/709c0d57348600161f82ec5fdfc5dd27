@@ -1,0 +1,13 @@
+package com.flp.ems.dao;
+
+import com.flp.ems.domain.Employee;
+
+public interface IemployeeDao {
+
+	public void addEmployee(Employee employee);
+	public void modifyEmployee();
+	public void removeEmployee();
+	public void searchEmployee();
+	public void getAllEmployee();
+	
+}

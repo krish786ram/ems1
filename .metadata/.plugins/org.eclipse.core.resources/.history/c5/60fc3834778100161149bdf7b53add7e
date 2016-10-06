@@ -1,0 +1,37 @@
+package com.barclays;
+
+ class LinkedList {
+	public Node firstNode,LastNode;
+	public LinkedList() {
+		firstNode=null;
+		LastNode=null;
+	}
+	public void insert(int value){
+		Node n=new Node(value,null);
+		if(firstNode==null){
+			firstNode=LastNode=n;
+		}
+		else{
+			LastNode.next=n;
+			LastNode=n;
+		}
+	}
+	public void display(){
+		Node node=firstNode;
+		while(node.next!=null){
+			node.display();
+			node=node.next;
+		}
+	}
+ class Node{
+		int data;
+		Node next;
+		Node(int data,Node next){
+			data=this.data;
+			next=this.next;
+		}
+		public void display(){
+			System.out.println(data);
+		}
+	}
+}

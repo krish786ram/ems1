@@ -1,0 +1,30 @@
+package com.flp.ems.dao;
+
+public class EmployeeDaoImplForList implements IemployeeDao{
+
+	@Override
+	public void addEmployee(Employee employee) {
+		
+	}
+
+	@Override
+	public void modifyEmployee() {
+		
+	}
+
+	@Override
+	public void removeEmployee() {
+		
+	}
+
+	@Override
+	public void searchEmployee() {
+		
+	}
+
+	@Override
+	public void getAllEmployee() {
+		
+	}
+
+}

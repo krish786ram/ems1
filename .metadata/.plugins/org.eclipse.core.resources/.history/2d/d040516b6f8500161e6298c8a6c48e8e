@@ -1,0 +1,10 @@
+
+public class Entry {
+	public static void main(String[] args) throws InterruptedException {
+		Container container=new Container();
+		
+		new Producer(container).start();
+		new Consumer(container).start();
+		
+	}
+}

@@ -1,0 +1,58 @@
+package com.flp.ems.view;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class BootClass {
+	public static void main(String[] args) {
+		menuSelection();
+	}
+	
+	public static void menuSelection(){
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Employee Management System");
+		
+		System.out.println("Enter 1 to add a Employee");
+		System.out.println("Enter 2 to modify a Employee");
+		System.out.println("Enter 3 to remove a Employee");
+		System.out.println("Enter 4 to search a Employee");
+		System.out.println("Enter 5 to get all Employees");
+		
+		int choice=sc.nextInt();
+		
+		UserInteraction ui=new UserInteraction();
+		
+		if(choice<=5&&choice>=1){
+			switch(choice){
+			case 1 :{
+				System.out.println("Adding an employee");
+				ui.addEmployee();
+				break;
+			}
+			case 2 :{
+				System.out.println("Enter a employee id to modify an employee information");
+				ui.modifyEmployee();
+				break;
+			}
+			case 3 :{
+				System.out.println("Enter a employee id to remove an employee");
+				ui.removeEmployee();
+				break;
+			}
+			case 4 :{
+				
+				
+				break;
+			}
+			case 5 :{
+				System.out.println("Information of all Employees: ");
+				ui.getAllEmployee();	
+				break;
+			}
+			}
+		}
+		else
+			System.out.println("Enter a CORRECT choice");
+	}
+}

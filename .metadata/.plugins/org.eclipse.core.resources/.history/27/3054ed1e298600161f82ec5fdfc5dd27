@@ -1,0 +1,13 @@
+package com.flp.ems.view;
+
+import java.util.Scanner;
+
+public class BootClass {
+	public static void main(String[] args) {
+		menuSelection();
+	}
+	
+	public static void menuSelection(){
+		Scanner sc=new Scanner(System.in);
+	}
+}

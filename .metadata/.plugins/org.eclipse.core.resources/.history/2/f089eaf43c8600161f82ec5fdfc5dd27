@@ -1,0 +1,43 @@
+package com.flp.ems.dao;
+
+import java.util.ArrayList;
+
+import com.flp.ems.domain.Employee;
+
+public class EmployeeDaoImplForList implements IemployeeDao{
+
+	ArrayList<Employee> employees=new ArrayList<>();
+	
+	@Override
+	public void addEmployee(Employee employee) {
+		employees.add(employee);
+	}
+
+	@Override
+	public void modifyEmployee(Employee employee) {
+		
+		
+	}
+
+	@Override
+	public void removeEmployee(String employee_id) {
+		for(Employee employee:employees){
+			if(employee.getKin_id()==employee_id){
+				employees.remove(employee);
+				break;
+			}
+		}
+	}
+
+	@Override
+	public void searchEmployee() {
+		
+	}
+
+	@Override
+	public ArrayList<Employee> getAllEmployee() {
+		return employees;
+		
+	}
+
+}

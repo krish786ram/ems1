@@ -1,0 +1,21 @@
+
+public class Producer extends Thread{
+
+	Container container;
+	
+	Producer(Container container){
+		this.setName("Producer_Thread");
+		this.container=container;
+	}
+	
+	@Override
+	public void run(){
+		while(true)
+			try {
+				container.put();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+	}
+	
+}

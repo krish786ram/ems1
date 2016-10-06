@@ -1,0 +1,89 @@
+package com.flp.ems.dao;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.flp.ems.domain.Employee;
+
+public class EmployeeDaoImplForList implements IemployeeDao{
+
+	static ArrayList<Employee> employees=new ArrayList<>();
+	
+	@Override
+	public void addEmployee(Employee employee) {
+		employees.add(employee);
+	}
+
+	@Override
+	public void modifyEmployee(HashMap<String,String> dataMap) {
+		String employee_id=dataMap.get("employee_id");
+		
+		for(Employee employee:employees){
+			if(employee.getKin_id()==employee_id){
+				
+				
+				if(dataMap.containsKey("first_name"))
+					employee.setFirst_name(dataMap.get("first_name"));
+				
+				if(dataMap.containsKey("last_name"))
+					employee.setLast_name(dataMap.get("last_name"));
+				
+				if(dataMap.containsKey("phone_number"))
+					employee.setPhone_number(dataMap.get("phone_number"));
+				
+				if(dataMap.containsKey("address"))
+					employee.setAddress(dataMap.get("address"));
+				
+				break;
+			}
+		}	
+	}
+
+	@Override
+	public void removeEmployee(String employee_id) {
+		for(Employee employee:employees){
+			if(employee.getKin_id()==employee_id){
+				employees.remove(employee);
+				break;
+			}
+		}
+	}
+
+	@Override
+	public Employee searchEmployee(HashMap<String,String> dataMap) {
+		Employee emp = null;
+		if(dataMap.containsKey("employee_id")){
+			for(Employee employee:employees){
+				if(employee.getKin_id()==dataMap.get("employee_id")){
+					return employee;
+				}
+			}
+		}
+		
+		else if(dataMap.containsKey("email_id")){
+			
+			for(Employee employee:employees){
+				if(employee.getEmail_id()==dataMap.get("email_id")){
+					return employee;
+				}
+			}	
+		}
+		
+		else if(dataMap.containsKey("first_name")){		
+			for(Employee employee:employees){
+				if(employee.getEmail_id()==dataMap.get("first_name")){
+					return employee;
+				}
+			}	
+		}
+		
+		return emp;
+		
+	}
+
+	@Override
+	public ArrayList<Employee> getAllEmployee() {
+		return employees;	
+	}
+
+}
